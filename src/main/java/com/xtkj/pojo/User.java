@@ -1,33 +1,97 @@
 package com.xtkj.pojo;
 
-public class User {
-    private Integer userId;
+import java.io.Serializable;
 
-    private String userName;
+/**
+ * @author
+ * 
+ */
+public class User implements Serializable {
+	private Integer user_id;
 
-    private String userPwd;
+	private String user_name;
 
-    public Integer getUserId() {
-        return userId;
-    }
+	private String user_pwd;
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
+	private Integer class_id;
 
-    public String getUserName() {
-        return userName;
-    }
+	private TClass userClass;
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
-    }
+	private static final long serialVersionUID = 1L;
 
-    public String getUserPwd() {
-        return userPwd;
-    }
+	/**
+	 * @return user_id
+	 */
+	public Integer getUser_id() {
+		return user_id;
+	}
 
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd == null ? null : userPwd.trim();
-    }
+	/**
+	 * @param user_id 要设置的 user_id
+	 */
+	public void setUser_id(Integer user_id) {
+
+		this.user_id = user_id;
+	}
+
+	/**
+	 * @return user_name
+	 */
+	public String getUser_name() {
+		return user_name;
+	}
+
+	/**
+	 * @param user_name 要设置的 user_name
+	 */
+	public void setUser_name(String user_name) {
+
+		this.user_name = user_name;
+	}
+
+	/**
+	 * @return user_pwd
+	 */
+	public String getUser_pwd() {
+		return user_pwd;
+	}
+
+	/**
+	 * @param user_pwd 要设置的 user_pwd
+	 */
+	public void setUser_pwd(String user_pwd) {
+
+		this.user_pwd = user_pwd;
+	}
+
+	/**
+	 * @return class_id
+	 */
+	public Integer getClass_id() {
+		return class_id;
+	}
+
+	/**
+	 * @param class_id 要设置的 class_id
+	 */
+	public void setClass_id(Integer class_id) {
+
+		this.class_id = class_id;
+	}
+
+	/**
+	 * @return userClass
+	 */
+	public TClass getUserClass() {
+		return userClass;
+	}
+
+	/**
+	 * @param userClass 要设置的 userClass
+	 */
+	public void setUserClass(TClass userClass) {
+
+		this.userClass = userClass;
+	}
+
 }

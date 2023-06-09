@@ -33,7 +33,7 @@
             <property name="mapperLocations" value="classpath:com/xtkj/mapper/*.xml"/>
         </bean>
         <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-            <property name="basePackage" value="com.xtkj.dao"/>
+            <property name="basePackage" value="com.xtkj.mapper"/>
         </bean>
 
         <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

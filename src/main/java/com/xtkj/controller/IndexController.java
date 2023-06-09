@@ -15,10 +15,23 @@ public class IndexController {
 	@Autowired
 	private InitService service;
 
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public String main(Model model) {
 		List<User> users = service.getUsers();
 		model.addAttribute("users", users);
+		return "index";
+	}
+
+	@RequestMapping("/addgoods")
+	public String addgoods(Model model) {
+		return "addgoods";
+	}
+
+	@RequestMapping("/add")
+	public String add(Model model, User user) {
+		service.insertSelective(user);
+		List<User> demoProducts = service.getUsers();
+		model.addAttribute("users", demoProducts);
 		return "index";
 	}
 }

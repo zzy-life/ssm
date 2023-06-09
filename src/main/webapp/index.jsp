@@ -7,15 +7,17 @@
     
 </head>
 <body>
+<table>
 <!-- 在页面中遍历users数据 -->
 <c:forEach items="${users}" var="user">
   <tr>
-    <td>${user.userId}</td>
-    <td>${user.userName}</td>
-    <td>${user.userPwd}</td>
+    <td>${user.user_id}</td>
+    <td>${user.user_name}</td>
+    <td>${user.user_pwd}</td>
+    <td>${user.userClass.class_name}</td>
   </tr>
 </c:forEach>
-
+</table>
 
         
 </body>
